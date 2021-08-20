@@ -1,0 +1,220 @@
+section {
+    padding: 50px 0!important;
+  &.bg-grey {
+    background-color: #f5f5f5;
+  }
+  .image-column {
+    margin-bottom: 0!important;
+  }
+  &.banner-section-two,
+  &.property-search-section {
+    padding: 0!important;
+  }
+}
+.news-section-two {
+  .sec-title {
+    margin-bottom: 20px;
+  }
+}
+
+.agents-section {
+  padding: 50px 0!important;
+}
+.banner-section-two {
+  .slide-item {
+    padding:0 0 100px;
+  }
+}
+.main-header {
+  .header-lower {
+    .logo {
+      img {
+        //max-width: 250px;
+        //height: auto;
+        //vertical-align: text-top;
+      }
+    }
+  }
+}
+.property-search-form {
+  .form-group {
+      input[type="submit"] {
+        position: relative;
+        display: inline-block;
+        width: 49%;
+      }
+    }
+  .form-group button {
+    position: relative;
+    display: inline-block;
+    width: 49%;
+  }
+}
+.property-list-view {
+  .property-block-two {
+    .lower-content {
+      border: 0;
+    }
+  }
+}
+.property-block {
+  .location {
+    padding-left: 20px;
+  }
+}
+#most-objects {
+  border: 0;
+  max-height: 450px;
+}
+.property-detail {
+  h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  .info-table {
+    td {
+      width:50%;
+      padding: 10px 15px;
+      line-height: 24px;
+      vertical-align: baseline;
+      strong {
+        line-height: 25px;
+      }
+    }
+  }
+}
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.about-agent-widget {
+  .image-box {
+    .image {
+      img {
+        //width: 50%;
+      }
+    }
+  }
+}
+.sidebar {
+  .recent-properties {
+    .widget-content {
+      padding: 0;
+      max-height: 300px;
+      overflow: hidden;
+    }
+  }
+  .ymaps-map {
+    height: 300px;
+    max-height: 300px;
+  }
+}
+.property-block-two {
+  .inner-box {
+    border: 1px solid #dddddd;
+  }
+  .property-info {
+    li {
+      margin-right: 15px;
+    }
+  }
+  .image-box {
+    .image {
+      img{
+        max-height: 250px;
+      }
+    }
+  }
+  .lower-content {
+    padding: 30px 15px 0;
+  }
+}
+.property-search-form{
+  &.style-four {
+    .range-slider-one {
+      label {
+        margin-bottom: 10px;
+      }
+      .ui-widget {
+        &.ui-widget-content {
+          margin-top: 5px;
+        }
+
+      }
+    }
+    .ui-selectmenu-button {
+      &.ui-button {
+        line-height: 19px;
+        padding: 5px 20px;
+        height: 30px;
+      }
+    }
+    .form-group {
+      input, select, textarea {
+        line-height: 19px;
+        padding: 5px 20px;
+        height: 30px;
+        &.btn-style-two {
+          background-color: #00c0ff;
+          color: white;
+          &:hover {
+            color: #777;
+
+          }
+        }
+      }
+    }
+    .ui-button {
+      .ui-icon {
+        &:before {
+          height: 30px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+.ui-menu {
+  .ui-menu-item {
+    height: 30px;
+  }
+  .ui-menu-item-wrapper {
+    line-height: 14px;
+  }
+}
+//.btn-style-two:hover:before {
+//  -webkit-transform: scale(1, 1);
+//  -ms-transform: scale(1, 1);
+//  transform: scale(1, 1);
+//  -webkit-transform-origin: bottom left;
+//  -ms-transform-origin: bottom left;
+//  transform-origin: bottom left;
+//}
+//.btn-style-two:before {
+//  position: absolute;
+//  left: 0;
+//  top: 0;
+//  height: 100%;
+//  width: 100%;
+//  content: "";
+//  background-color: #ffffff;
+//  -webkit-transform: scale(0, 1);
+//  -ms-transform: scale(0, 1);
+//  transform: scale(0, 1);
+//  -webkit-transform-origin: top right;
+//  -ms-transform-origin: top right;
+//  transform-origin: top right;
+//  -webkit-transition: transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+//  -moz-transition: transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+//  -o-transition: transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+//  transition: transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+//  -webkit-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+//  -moz-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+//  -o-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+//  transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+//}

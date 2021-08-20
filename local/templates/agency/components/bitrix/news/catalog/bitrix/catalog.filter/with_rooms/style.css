@@ -1,0 +1,28 @@
+.block_checkbox {
+    display: flex;
+    justify-content: space-between;
+}
+input.checkbox {
+    display: none!important;
+}
+.checkbox + label{
+    display: block;
+    width: 45px;
+    height: 30px;
+    /*background: #ccc;*/
+    border: 1px solid #555;
+    text-align: center;
+    padding-top: 3px;
+}
+.checkbox + label:before{
+    content: '';
+    font-size: 20px;
+}
+.checkbox:checked + label{
+    border: 1px solid #00c0ff;
+    color: #00c0ff!important;
+
+}
+.checkbox:checked + label:before{
+    color: #00c0ff;
+}

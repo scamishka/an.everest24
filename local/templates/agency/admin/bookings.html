@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Revel - Real Estate HTML Template | Bookings</title>
+<!-- Stylesheets -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Header Span -->
+    <span class="header-span"></span>
+
+    <!-- Main Header-->
+    <header class="main-header">
+        <div class="main-box clearfix">
+        	<!-- Logo Box -->
+            <div class="logo-box">
+                <div class="logo"><a href="../index.html"><img src="images/logo-small.svg" alt="" title=""></a></div>
+            </div>
+
+            <!-- Upper Right-->
+            <div class="upper-right">
+                <ul class="clearfix">
+                    <li class="submit-property">
+                    	<a href="submit-property.html" title="Submit Property" class="theme-btn btn-style-one"><span class="btn-title"><i class="la la-cloud-upload"></i></span></a>
+                    </li>
+                    <li class="nav-toggler">
+                    	<button class="toggler-btn nav-btn"><span class="bar bar-one"></span><span class="bar bar-two"></span><span class="bar bar-three"></span></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--End Header Lower-->
+    </header>
+    <!--End Main Header -->
+    
+    <!-- Hidden Bar -->
+    <section class="hidden-bar sidebar-wrapper">
+        <div class="dashboard-inner">
+        	<div class="cross-icon"><span class="pe-7s-close-circle"></span></div>
+        	<div class="sidebar-header">
+		        <div class="user-pic">
+		          	<img class="img-responsive img-rounded" src="images/resource/user.jpg" alt="User picture">
+		        </div>
+		        <div class="user-info">
+		          	<span class="user-name">Jhon
+		            	<strong>Smith</strong>
+		          	</span>
+		          	<span class="user-role">Administrator</span>
+		          	<span class="user-status">
+		            	<i class="online"></i>
+		            	<span>Online</span>
+		          	</span>
+		        </div>
+		    </div>
+		    <div class="sidebar-search">
+                <form method="post" action="dashboard.html">
+                    <div class="form-group">
+                        <input type="search" name="search-field" value="" placeholder="Search" required="">
+                        <button type="submit"><span class="icon la la-search"></span></button>
+                    </div>
+                </form>
+		    </div>
+		    <!-- sidebar-search  -->
+        	<ul class="navigation">
+	            <li><a href="dashboard.html"><i class="la la-home"></i> Dashboard <span class="badge badge-success">New</span></a></li>
+	            <li><a href="messages.html"><i class="la la-envelope"></i> Messages <span class="badge badge-danger">15</span></a></li>
+	            <li class="active"><a href="bookings.html"><i class="la la-calendar"></i>Bookings <span class="badge badge-primary">10</span></a></li>
+	            <li><a href="my-properties.html"><i class="la la-diamond"></i>My Properties <span class="badge badge-warning">16</span></a></li>
+	            <li><a href="my-invoices.html"><i class="la la-files-o"></i>My Invoices</a></li>
+	            <li><a href="favorited-properties.html"><i class="la la-thumbs-o-up"></i>Favorited Properties</a></li>
+	            <li><a href="submit-property.html"><i class="la la-upload"></i>Submit Property</a></li>
+	            <li><a href="my-profile.html"><i class="la la-user"></i>My Profile</a></li>
+	            <li><a href="../index.html"><i class="la la-sign-out"></i>Logout</a></li>
+	        </ul>
+	    </div>
+    </section>
+    <!--End Hidden Bar -->
+
+    <div class="dashboard">
+	    <div class="container-fluid">
+	        <div class="content-area">
+	            <div class="dashboard-content">
+	                <div class="dashboard-header clearfix">
+	                    <div class="row">
+	                        <div class="col-md-6 col-sm-12"><h4>Bookings</h4></div>
+	                        <div class="col-md-6 col-sm-12">
+	                            <div class="breadcrumb-nav">
+	                                <ul>
+	                                    <li><a href="../index.html">Index</a></li>
+	                                    <li><a href="dashboard.html">Dashboard</a></li>
+	                                    <li class="active">Booking</li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="row">
+	                    <div class="column col-lg-12">
+	                    	<div class="messages-box booking-msgs">
+	                    		<div class="title"><h3>Booking List</h3></div>
+	                    		<div class="inner-box row">
+	                                <!--comment-->
+	                                <article class="message-box col-lg-4 col-md-6 col-sm-12">
+	                                    <div class="thumb-box">
+	                                        <figure class="thumb"><img src="images/resource/review-thumb-1.jpg" alt=""></figure>
+	                                    </div>
+	                                    <div class="content-box">
+	                                        <div class="name">Monija Moro</div>
+	                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+	                                        <ul class="booking-info">
+	                                        	<li><strong>Item </strong> Real Luxury Villa</li>
+	                                        	<li><strong>Start date </strong> 18 November 2019</li>
+	                                        	<li><strong>End date </strong> 18 November 2019</li>
+	                                        	<li><strong>Booking details </strong> 4 Peoples</li>
+	                                        	<li><strong>Mail </strong><a href="mailto:info@ary-themes.com">info@ary-themes.com</a></li>
+	                                        	<li><strong>Phone </strong><a href="tel:+79617036705">+79617036705</a></li>
+	                                        </ul>
+	                                        <div class="btn-box">
+	                                        	<a href="bookings.html#">Approve <i class="pe-7s-check"></i></a>
+	                                        	<a href="bookings.html#">Reject <i class="pe-7s-close-circle"></i></a>
+	                                        </div>
+	                                    </div>
+	                                </article>
+
+	                                <!--comment-->
+	                                <article class="message-box col-lg-4 col-md-6 col-sm-12">
+	                                    <div class="thumb-box">
+	                                        <figure class="thumb"><img src="images/resource/review-thumb-2.jpg" alt=""></figure>
+	                                    </div>
+	                                    <div class="content-box">
+	                                        <div class="name">Mibano Rests</div>
+	                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+	                                        <ul class="booking-info">
+	                                        	<li><strong>Item </strong> Real Luxury Villa</li>
+	                                        	<li><strong>Start date </strong> 18 November 2019</li>
+	                                        	<li><strong>End date </strong> 18 November 2019</li>
+	                                        	<li><strong>Booking details </strong> 4 Peoples</li>
+	                                        	<li><strong>Mail </strong><a href="mailto:info@ary-themes.com">info@ary-themes.com</a></li>
+	                                        	<li><strong>Phone </strong><a href="tel:+79617036705">+79617036705</a></li>
+	                                        </ul>
+	                                        <div class="btn-box">
+	                                        	<a href="bookings.html#">Approve <i class="pe-7s-check"></i></a>
+	                                        	<a href="bookings.html#">Reject <i class="pe-7s-close-circle"></i></a>
+	                                        </div>
+	                                    </div>
+	                                </article>
+
+	                                <!--comment-->
+	                                <article class="message-box col-lg-4 col-md-6 col-sm-12">
+	                                    <div class="thumb-box">
+	                                        <figure class="thumb"><img src="images/resource/review-thumb-3.jpg" alt=""></figure>
+	                                    </div>
+	                                    <div class="content-box">
+	                                        <div class="name">Cojari Barna</div>
+	                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+	                                        <ul class="booking-info">
+	                                        	<li><strong>Item </strong> Real Luxury Villa</li>
+	                                        	<li><strong>Start date </strong> 18 November 2019</li>
+	                                        	<li><strong>End date </strong> 18 November 2019</li>
+	                                        	<li><strong>Booking details </strong> 4 Peoples</li>
+	                                        	<li><strong>Mail </strong><a href="mailto:info@ary-themes.com">info@ary-themes.com</a></li>
+	                                        	<li><strong>Phone </strong><a href="tel:+79617036705">+79617036705</a></li>
+	                                        </ul>
+	                                        <div class="btn-box">
+	                                        	<a href="bookings.html#">Approve <i class="pe-7s-check"></i></a>
+	                                        	<a href="bookings.html#">Reject <i class="pe-7s-close-circle"></i></a>
+	                                        </div>
+	                                    </div>
+	                                </article>
+
+	                                <!--comment-->
+	                                <article class="message-box col-lg-4 col-md-6 col-sm-12">
+	                                    <div class="thumb-box">
+	                                        <figure class="thumb"><img src="images/resource/review-thumb-1.jpg" alt=""></figure>
+	                                    </div>
+	                                    <div class="content-box">
+	                                        <div class="name">Monija Moro</div>
+	                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+	                                        <ul class="booking-info">
+	                                        	<li><strong>Item </strong> Real Luxury Villa</li>
+	                                        	<li><strong>Start date </strong> 18 November 2019</li>
+	                                        	<li><strong>End date </strong> 18 November 2019</li>
+	                                        	<li><strong>Booking details </strong> 4 Peoples</li>
+	                                        	<li><strong>Mail </strong><a href="mailto:info@ary-themes.com">info@ary-themes.com</a></li>
+	                                        	<li><strong>Phone </strong><a href="tel:+79617036705">+79617036705</a></li>
+	                                        </ul>
+	                                        <div class="btn-box">
+	                                        	<a href="bookings.html#">Approve <i class="pe-7s-check"></i></a>
+	                                        	<a href="bookings.html#">Reject <i class="pe-7s-close-circle"></i></a>
+	                                        </div>
+	                                    </div>
+	                                </article>
+
+	                                <!--comment-->
+	                                <article class="message-box col-lg-4 col-md-6 col-sm-12">
+	                                    <div class="thumb-box">
+	                                        <figure class="thumb"><img src="images/resource/review-thumb-2.jpg" alt=""></figure>
+	                                    </div>
+	                                    <div class="content-box">
+	                                        <div class="name">Mibano Rests</div>
+	                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+	                                        <ul class="booking-info">
+	                                        	<li><strong>Item </strong> Real Luxury Villa</li>
+	                                        	<li><strong>Start date </strong> 18 November 2019</li>
+	                                        	<li><strong>End date </strong> 18 November 2019</li>
+	                                        	<li><strong>Booking details </strong> 4 Peoples</li>
+	                                        	<li><strong>Mail </strong><a href="mailto:info@ary-themes.com">info@ary-themes.com</a></li>
+	                                        	<li><strong>Phone </strong><a href="tel:+79617036705">+79617036705</a></li>
+	                                        </ul>
+	                                        <div class="btn-box">
+	                                        	<a href="bookings.html#">Approve <i class="pe-7s-check"></i></a>
+	                                        	<a href="bookings.html#">Reject <i class="pe-7s-close-circle"></i></a>
+	                                        </div>
+	                                    </div>
+	                                </article>
+
+	                                <!--comment-->
+	                                <article class="message-box col-lg-4 col-md-6 col-sm-12">
+	                                    <div class="thumb-box">
+	                                        <figure class="thumb"><img src="images/resource/review-thumb-3.jpg" alt=""></figure>
+	                                    </div>
+	                                    <div class="content-box">
+	                                        <div class="name">Cojari Barna</div>
+	                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+	                                        <ul class="booking-info">
+	                                        	<li><strong>Item </strong> Real Luxury Villa</li>
+	                                        	<li><strong>Start date </strong> 18 November 2019</li>
+	                                        	<li><strong>End date </strong> 18 November 2019</li>
+	                                        	<li><strong>Booking details </strong> 4 Peoples</li>
+	                                        	<li><strong>Mail </strong><a href="mailto:info@ary-themes.com">info@ary-themes.com</a></li>
+	                                        	<li><strong>Phone </strong><a href="tel:+79617036705">+79617036705</a></li>
+	                                        </ul>
+	                                        <div class="btn-box">
+	                                        	<a href="bookings.html#">Approve <i class="pe-7s-check"></i></a>
+	                                        	<a href="bookings.html#">Reject <i class="pe-7s-close-circle"></i></a>
+	                                        </div>
+	                                    </div>
+	                                </article>
+	                    		</div>
+	                    	</div>
+	                    </div>
+	                </div>
+	            </div>
+	            <p class="copyright-text">© 2019 <a href="bookings.html#">ARY Themes</a> All right reserved.</p>
+	        </div>
+	    </div>
+	</div>
+
+</div>
+    
+<script src="js/jquery.js"></script> 
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/dropzone.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

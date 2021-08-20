@@ -1,0 +1,346 @@
+.content-center {
+	padding-top: 20px;
+	position: relative;
+}
+hr {
+	background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.15), transparent);
+	border: 0 none;
+	height: 1px;
+	margin: 22px 0;
+}
+.is_opacity{
+	opacity: 0;
+}
+
+.asside-panel .btn-primary,
+.realty-filter .btn-primary,
+.realty_list .btn-primary {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+}
+
+/*----asside-panel-----*/
+.asside-panel {
+	background: #fbfbfb none repeat scroll 0 0;
+	border: 1px solid #ddd;
+	border-radius: 7px;
+	margin-bottom: 1.0714em;
+	margin-top: 0;
+	position: relative;
+}
+
+.asside-panel-title {
+	background: #f5f5f5 none repeat scroll 0 0;
+	border-bottom: 1px solid #ddd;
+	border-radius: 6px 6px 0 0;
+	font-size: 0.9286em;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 0;
+	padding: 0.7143em 1.0714em;
+	position: relative;
+	text-transform: uppercase;
+	transition: all 0.25s ease 0s;
+	color: #777777;
+}
+
+.asside-panel-content {
+	padding: 10px 15px;
+}
+
+.breadcrumb {
+	font-size: 13px;
+	margin-bottom: 0;
+}
+.menu_realty_asside {
+	font-size: 13px;
+}
+
+.menu_realty_asside, .menu_realty_asside ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu_realty_asside ul {
+	margin-left: 5px;
+}
+
+.menu_realty_asside > li > span {
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-bottom: 5px;
+	display: block;
+}
+.reset-filter {
+	width: 45%;
+	float: left;
+}
+.submit-filter {
+	width: 45%;
+	float: right;
+}
+/*div#sticky-wrapper {*/
+/*height: 106px !important;*/
+/*}*/
+.content-center #sticky-wrapper {
+	height: 44px !important;
+}
+.menu_realty_asside a {
+	color: inherit;
+	margin-bottom: 5px;
+	display: block;
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+}
+
+.menu_realty_asside a:hover {
+	text-decoration: none;
+}
+
+.menu_realty_asside .count {
+	color: #888;
+	font-size: 12px;
+}
+/*-----realty-filter-----*/
+.reset-filter {
+	width: 45%;
+	float: left;
+}
+.submit-filter {
+	width: 45%;
+	float: right;
+}
+.filter-range.area-filtr {
+	margin-top: 15px;
+}
+.filter-range.price-filtr {
+	padding-bottom: 11px;
+}
+
+.realty-filter hr {
+	margin: 10px 0;
+}
+
+.realty-filter .reset-filter {
+	margin-bottom: 20px;
+}
+
+.realty-filter .filter-title {
+	margin: 15px 0 10px;
+	display: table;
+	width: 100%;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+.realty-filter .filter-title .filter-title1, .realty-filter .filter-title .filter-title2, .realty-filter .filter-title .filter-title3 {
+	display: table-cell;
+}
+
+.realty-filter .filter-title .filter-title2 {
+	padding: 0 0;
+	padding-right: 5px;
+	white-space: nowrap;
+}
+
+.realty-filter .filter-title .filter-title1, .realty-filter .filter-title .filter-title3 {
+	width: 90%;
+	position: relative;
+}
+button.btn-hamburger.js-slideout-toggle{
+	display: none;
+}
+.realty-filter .filter-title .filter-title1:before, .realty-filter .filter-title .filter-title3:before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 1px;
+	top: 50%;
+}
+
+.realty-filter .filter-title .filter-title1 {
+	display: none;
+}
+
+.realty-filter .filter-title .filter-title1:before {
+	background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.15));
+}
+
+.realty-filter .filter-title .filter-title3:before {
+	background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.15));
+}
+
+.realty-filter-buttons .btn.btn-ext {
+	font-size: 12px;
+	padding-right: 0;
+	padding-left: 0;
+	margin-top: 10px;
+}
+
+.filter-check {
+	font-size: 13px;
+}
+
+.filter-check-title {
+	font-weight: 600;
+}
+
+.filter-check label {
+	background: #cbcbcb;
+	padding: 3px 10px;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 3px;
+}
+
+.filter-check input[type=checkbox], .filter-check input[type=radio] {
+	display: none;
+}
+
+a.logo {
+	font-size: 25px;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+.filter-range {
+	font-size: 13px;
+}
+
+.filter-range-title {
+	font-weight: 600;
+}
+
+.filter-range [class^=col] {
+	padding: 0 5px;
+}
+
+.filter-range .row {
+	margin: 0 -5px;
+}
+
+.filter-range input {
+	width: 100%;
+	border: 1px solid #ddd;
+	padding: 3px 5px;
+	font-size: 13px;
+}
+
+.filter-range input:focus {
+	outline: none;
+}
+/*-------realty_list-----*/
+
+.realty_list_top_nav {
+	margin-bottom: 10px;
+}
+
+.realty_list_top_nav .sticky {
+	background: white;
+	z-index: 5;
+	padding: 7px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.realty_list_top_nav .dropdown-item, .realty_list_top_nav .btn {
+	padding: 5px 10px;
+	font-size: 13px;
+}
+
+.realty_list_top_nav .caption {
+	margin-right: 10px;
+}
+
+.realty_list {
+	font-size: 0.9em;
+}
+
+.realty_list .realty_list_item {
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+.realty_list .realty_list_item .row {
+	margin-left: -5px;
+	margin-right: -5px;
+}
+.realty_list .realty_list_item [class^=col] {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.realty_list .realty_list_item .area {
+	color: grey;
+	margin-bottom: 5px;
+}
+
+.realty_list .realty_list_item .area .fa {
+	margin-right: 7px;
+}
+
+.realty_list .realty_list_item .title {
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.realty_list .realty_list_item .price {
+	font-size: 25px;
+	font-weight: 300;
+	white-space: nowrap;
+}
+
+.realty_list .realty_list_item .price .fa {
+	margin-left: 7px;
+}
+
+.realty_list .realty_list_item .desc {
+	margin-top: 7px;
+	font-size: 0.9em;
+}
+
+.realty_list img {
+	width: 100%;
+	height: 145px;
+	object-fit: cover;
+}
+
+.realty_list .owl-carousel {
+	margin: 0 2px;
+}
+
+.realty_list .owl-carousel .owl-nav {
+	font-family: 'FontAwesome';
+	position: absolute;
+	bottom: 6px;
+	right: 6px;
+}
+.is-sticky span.logo-text {
+
+	height: 45px;
+}
+.realty_list .owl-carousel .owl-nav .owl-prev, .realty_list .owl-carousel .owl-nav .owl-next {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	text-align: center;
+	margin-left: 2px;
+	font-size: 16px;
+	border-radius: 3px;
+}
+
+.realty_list .owl-carousel .owl-nav .owl-prev.disabled, .realty_list .owl-carousel .owl-nav .owl-next.disabled {
+	color: grey;
+	cursor: default;
+}
+
+.realty_list .realty_list_item .pict-container a>img {
+	width: 100%;
+}

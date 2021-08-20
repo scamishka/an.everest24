@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Revel - Real Estate HTML Template | Dashboard</title>
+<!-- Stylesheets -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Header Span -->
+    <span class="header-span"></span>
+
+    <!-- Main Header-->
+    <header class="main-header">
+        <div class="main-box clearfix">
+        	<!-- Logo Box -->
+            <div class="logo-box">
+                <div class="logo"><a href="../index.html"><img src="images/logo-small.svg" alt="" title=""></a></div>
+            </div>
+
+            <!-- Upper Right-->
+            <div class="upper-right">
+                <ul class="clearfix">
+                    <li class="submit-property">
+                    	<a href="submit-property.html" title="Submit Property" class="theme-btn btn-style-one"><span class="btn-title"><i class="la la-cloud-upload"></i></span></a>
+                    </li>
+                    <li class="nav-toggler">
+                    	<button class="toggler-btn nav-btn"><span class="bar bar-one"></span><span class="bar bar-two"></span><span class="bar bar-three"></span></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--End Header Lower-->
+    </header>
+    <!--End Main Header -->
+    
+    <!-- Hidden Bar -->
+    <section class="hidden-bar sidebar-wrapper">
+        <div class="dashboard-inner">
+        	<div class="cross-icon"><span class="pe-7s-close-circle"></span></div>
+        	<div class="sidebar-header">
+		        <div class="user-pic">
+		          	<img class="img-responsive img-rounded" src="images/resource/user.jpg" alt="User picture">
+		        </div>
+		        <div class="user-info">
+		          	<span class="user-name">Jhon
+		            	<strong>Smith</strong>
+		          	</span>
+		          	<span class="user-role">Administrator</span>
+		          	<span class="user-status">
+		            	<i class="online"></i>
+		            	<span>Online</span>
+		          	</span>
+		        </div>
+		    </div>
+		    <div class="sidebar-search">
+                <form method="post" action="dashboard.html">
+                    <div class="form-group">
+                        <input type="search" name="search-field" value="" placeholder="Search" required="">
+                        <button type="submit"><span class="icon la la-search"></span></button>
+                    </div>
+                </form>
+		    </div>
+		    <!-- sidebar-search  -->
+        	<ul class="navigation">
+	            <li class="active"><a href="dashboard.html"><i class="la la-home"></i> Dashboard <span class="badge badge-success">New</span></a></li>
+	            <li><a href="messages.html"><i class="la la-envelope"></i> Messages <span class="badge badge-danger">15</span></a></li>
+	            <li><a href="bookings.html"><i class="la la-calendar"></i>Bookings <span class="badge badge-primary">10</span></a></li>
+	            <li><a href="my-properties.html"><i class="la la-diamond"></i>My Properties <span class="badge badge-warning">16</span></a></li>
+	            <li><a href="my-invoices.html"><i class="la la-files-o"></i>My Invoices</a></li>
+	            <li><a href="favorited-properties.html"><i class="la la-thumbs-o-up"></i>Favorited Properties</a></li>
+	            <li><a href="submit-property.html"><i class="la la-upload"></i>Submit Property</a></li>
+	            <li><a href="my-profile.html"><i class="la la-user"></i>My Profile</a></li>
+	            <li><a href="../index.html"><i class="la la-sign-out"></i>Logout</a></li>
+	        </ul>
+	    </div>
+    </section>
+    <!--End Hidden Bar -->
+
+    <div class="dashboard">
+	    <div class="container-fluid">
+	        <div class="content-area">
+	            <div class="dashboard-content">
+	                <div class="dashboard-header clearfix">
+	                    <div class="row">
+	                        <div class="col-md-6 col-sm-12"><h4>Dashboard</h4></div>
+	                        <div class="col-md-6 col-sm-12">
+	                            <div class="breadcrumb-nav">
+	                                <ul>
+	                                    <li><a href="../index.html">Index</a></li>
+	                                    <li class="active">Dashboard</li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+
+	                <div class="row">
+	                    <div class="col-lg-3 col-md-6 col-sm-6">
+	                        <div class="ui-item">
+	                            <div class="left">
+	                                <h4>242</h4>
+	                                <p>Active Listings</p>
+	                            </div>
+	                            <div class="right">
+	                                <i class="la la-map-marker"></i>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-lg-3 col-md-6 col-sm-6">
+	                        <div class="ui-item">
+	                            <div class="left">
+	                                <h4>1242</h4>
+	                                <p>Listing Views</p>
+	                            </div>
+	                            <div class="right">
+	                                <i class="la la-eye"></i>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-lg-3 col-md-6 col-sm-6">
+	                        <div class="ui-item">
+	                            <div class="left">
+	                                <h4>786</h4>
+	                                <p>Reviews</p>
+	                            </div>
+	                            <div class="right">
+	                                <i class="la la-comments-o"></i>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-lg-3 col-md-6 col-sm-6">
+	                        <div class="ui-item">
+	                            <div class="left">
+	                                <h4>42</h4>
+	                                <p>Bookmarked</p>
+	                            </div>
+	                            <div class="right">
+	                                <i class="la la-heart-o"></i>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+
+	                <div class="row">
+	                    <div class="column col-lg-6 col-md-12">
+	                    	<div class="comments-tab">
+	                    		<h3>Comments</h3>
+                                <div class="tabs-box">
+                                	<ul class="tab-buttons">
+					                    <li data-tab="#pending" class="tab-btn active-btn">Read</li>
+					                    <li data-tab="#approved" class="tab-btn">Unread</li>
+					                </ul>
+
+                                    <div class="tabs-content" >
+                                    	<!-- Tab Active tab-->
+                						<div class="tab active-tab" id="pending">
+                                            <div class="comments-area">
+				                                <!--comment-->
+				                                <article class="message-box">
+				                                    <div class="thumb-box">
+				                                        <figure class="thumb"><img src="images/resource/review-thumb-1.jpg" alt=""></figure>
+				                                    </div>
+				                                    <div class="content-box">
+				                                        <div class="name">Rosendo Farran</div>
+				                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+				                                        <div class="text">Accusantium aut, consequatur, culpa dolorum est facilis illo magnam numquam officia omnis qui recusandae sit, tempora ullam unde velit!</div>
+				                                        <a href="dashboard.html#" class="reply-btn">Reply</a>
+				                                    </div>
+				                                </article>
+
+				                                <!--comment-->
+				                                <article class="message-box">
+				                                    <div class="thumb-box">
+				                                        <figure class="thumb"><img src="images/resource/review-thumb-2.jpg" alt=""></figure>
+				                                    </div>
+				                                    <div class="content-box">
+				                                        <div class="name">Glayds Flipp</div>
+				                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+				                                        <div class="text">Accusantium aut, consequatur, culpa dolorum est facilis illo magnam numquam officia omnis qui recusandae sit, tempora ullam unde velit!</div>
+				                                        <a href="dashboard.html#" class="reply-btn">Reply</a>
+				                                    </div>
+				                                </article>
+
+				                                <!--comment-->
+				                                <article class="message-box">
+				                                    <div class="thumb-box">
+				                                        <figure class="thumb"><img src="images/resource/review-thumb-3.jpg" alt=""></figure>
+				                                    </div>
+				                                    <div class="content-box">
+				                                        <div class="name">Coralie Pletcher</div>
+				                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+				                                        <div class="text">Accusantium aut, consequatur, culpa dolorum est facilis illo magnam numquam officia omnis qui recusandae sit, tempora ullam unde velit!</div>
+				                                        <a href="dashboard.html#" class="reply-btn">Reply</a>
+				                                    </div>
+				                                </article>
+					                        </div>
+                                        </div>
+
+                                    	<!-- Tab -->
+                                        <div class="tab" id="approved">
+                                            <div class="comments-area">
+				                                <!--comment-->
+				                                <article class="message-box">
+				                                    <div class="thumb-box">
+				                                        <figure class="thumb"><img src="images/resource/review-thumb-1.jpg" alt=""></figure>
+				                                    </div>
+				                                    <div class="content-box">
+				                                        <div class="name">Monija Moro</div>
+				                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+				                                        <div class="text">Accusantium aut, consequatur, culpa dolorum est facilis illo magnam numquam officia omnis qui recusandae sit, tempora ullam unde velit!</div>
+				                                        <a href="dashboard.html#" class="reply-btn">Reply</a>
+				                                    </div>
+				                                </article>
+
+				                                <!--comment-->
+				                                <article class="message-box">
+				                                    <div class="thumb-box">
+				                                        <figure class="thumb"><img src="images/resource/review-thumb-2.jpg" alt=""></figure>
+				                                    </div>
+				                                    <div class="content-box">
+				                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+				                                        <div class="text">Accusantium aut, consequatur, culpa dolorum est facilis illo magnam numquam officia omnis qui recusandae sit, tempora ullam unde velit!</div>
+				                                        <div class="name">Mibano Rests</div>
+				                                        <a href="dashboard.html#" class="reply-btn">Reply</a>
+				                                    </div>
+				                                </article>
+
+				                                <!--comment-->
+				                                <article class="message-box">
+				                                    <div class="thumb-box">
+				                                        <figure class="thumb"><img src="images/resource/review-thumb-3.jpg" alt=""></figure>
+				                                    </div>
+				                                    <div class="content-box">
+				                                        <div class="name">Cojari Barna</div>
+				                                        <span class="date"><i class="la la-calendar"></i> 8:42 PM 1/28/2017</span>
+				                                        <div class="text">Accusantium aut, consequatur, culpa dolorum est facilis illo magnam numquam officia omnis qui recusandae sit, tempora ullam unde velit!</div>
+				                                        <a href="dashboard.html#" class="reply-btn">Reply</a>
+				                                    </div>
+				                                </article>
+					                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+	                    	</div>
+	                    </div>
+
+	                    <div class="column col-lg-6 col-md-12">
+	                    	<div class="comments-tab">
+	                    		<h3>News Users</h3>
+                                <div class="tabs-box">
+                                	<ul class="tab-buttons">
+					                    <li data-tab="#pending-2" class="tab-btn active-btn">Pending</li>
+					                    <li data-tab="#approved-2" class="tab-btn">Approved</li>
+					                </ul>
+
+                                    <div class="tabs-content" >
+                                    	<!-- Tab Active tab-->
+                						<div class="tab active-tab" id="pending-2">
+                                            <div class="comments-area">
+				                                <div class="new-user-box">
+	                                                <div class="user-author">
+	                                                    <a href="dashboard.html#">
+	                                                        <img src="images/resource/avatar-1.jpg" alt="avatar-user">
+	                                                    </a>
+	                                                </div>
+	                                                <div class="user-content">
+	                                                    <div class="f-left">
+	                                                        <h5>Chet Koepsel</h5>
+	                                                        <p>Visual Designer,Google Inc</p>
+	                                                    </div>
+	                                                    <div class="f-right">
+	                                                        <a href="dashboard.html#" class="follow">Follow</a>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+
+	                                            <div class="new-user-box">
+	                                                <div class="user-author">
+	                                                    <a href="dashboard.html#">
+	                                                        <img src="images/resource/avatar-2.jpg" alt="avatar-user">
+	                                                    </a>
+	                                                </div>
+	                                                <div class="user-content">
+	                                                    <div class="f-left">
+	                                                        <h5>Ernesto Schillings</h5>
+	                                                        <p>Visual Designer,Google Inc</p>
+	                                                    </div>
+	                                                    <div class="f-right">
+	                                                        <a href="dashboard.html#" class="follow">Follow</a>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+
+	                                            <div class="new-user-box">
+	                                                <div class="user-author">
+	                                                    <a href="dashboard.html#">
+	                                                        <img src="images/resource/avatar-3.jpg" alt="avatar-user">
+	                                                    </a>
+	                                                </div>
+	                                                <div class="user-content">
+	                                                    <div class="f-left">
+	                                                        <h5>Janessa Oldakowski</h5>
+	                                                        <p>Visual Designer,Google Inc</p>
+	                                                    </div>
+	                                                    <div class="f-right">
+	                                                        <a href="dashboard.html#" class="follow">Follow</a>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+
+	                                            <div class="new-user-box">
+	                                                <div class="user-author">
+	                                                    <a href="dashboard.html#">
+	                                                        <img src="images/resource/avatar-4.jpg" alt="avatar-user">
+	                                                    </a>
+	                                                </div>
+	                                                <div class="user-content">
+	                                                    <div class="f-left">
+	                                                        <h5>Amalia Quevedo</h5>
+	                                                        <p>Visual Designer,Google Inc</p>
+	                                                    </div>
+	                                                    <div class="f-right">
+	                                                        <a href="dashboard.html#" class="follow">Follow</a>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+					                        </div>
+                                        </div>
+
+                                    	<!-- Tab -->
+                                        <div class="tab" id="approved-2">
+                                            <div class="comments-area">
+				                                <div class="new-user-box">
+	                                                <div class="user-author">
+	                                                    <a href="dashboard.html#">
+	                                                        <img src="images/resource/avatar-1.jpg" alt="avatar-user">
+	                                                    </a>
+	                                                </div>
+	                                                <div class="user-content">
+	                                                    <div class="f-left">
+	                                                        <h5>Chet Koepsel</h5>
+	                                                        <p>Visual Designer,Google Inc</p>
+	                                                    </div>
+	                                                    <div class="f-right">
+	                                                        <a href="dashboard.html#" class="follow">Follow</a>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+
+	                                            <div class="new-user-box">
+	                                                <div class="user-author">
+	                                                    <a href="dashboard.html#">
+	                                                        <img src="images/resource/avatar-2.jpg" alt="avatar-user">
+	                                                    </a>
+	                                                </div>
+	                                                <div class="user-content">
+	                                                    <div class="f-left">
+	                                                        <h5>Ernesto Schillings</h5>
+	                                                        <p>Visual Designer,Google Inc</p>
+	                                                    </div>
+	                                                    <div class="f-right">
+	                                                        <a href="dashboard.html#" class="follow">Follow</a>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+
+	                                            <div class="new-user-box">
+	                                                <div class="user-author">
+	                                                    <a href="dashboard.html#">
+	                                                        <img src="images/resource/avatar-3.jpg" alt="avatar-user">
+	                                                    </a>
+	                                                </div>
+	                                                <div class="user-content">
+	                                                    <div class="f-left">
+	                                                        <h5>Janessa Oldakowski</h5>
+	                                                        <p>Visual Designer,Google Inc</p>
+	                                                    </div>
+	                                                    <div class="f-right">
+	                                                        <a href="dashboard.html#" class="follow">Follow</a>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+
+	                                            <div class="new-user-box">
+	                                                <div class="user-author">
+	                                                    <a href="dashboard.html#">
+	                                                        <img src="images/resource/avatar-4.jpg" alt="avatar-user">
+	                                                    </a>
+	                                                </div>
+	                                                <div class="user-content">
+	                                                    <div class="f-left">
+	                                                        <h5>Amalia Quevedo</h5>
+	                                                        <p>Visual Designer,Google Inc</p>
+	                                                    </div>
+	                                                    <div class="f-right">
+	                                                        <a href="dashboard.html#" class="follow">Follow</a>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+					                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+	                    	</div>
+	                    </div>
+	                </div>
+	            </div>
+	            <p class="copyright-text">© 2019 <a href="dashboard.html#">ARY Themes</a> All right reserved.</p>
+	        </div>
+	    </div>
+	</div>
+
+</div>
+    
+<script src="js/jquery.js"></script> 
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/dropzone.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

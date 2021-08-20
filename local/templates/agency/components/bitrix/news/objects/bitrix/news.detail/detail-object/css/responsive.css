@@ -1,0 +1,114 @@
+@media (max-width: 1300px) {
+    .h1, h1 {
+        font-size: 26px;
+        line-height: 50px !important;
+    }
+}
+@media (max-width: 1200px) {
+    span.logo-name {
+        line-height: 45px;
+        height: 50px;
+        padding: 8px 6px 7px 10px;
+    }
+    span.photo {
+        width: 60px;
+        height: 60px;
+    }
+    .header-logo a {
+        font-size: 20px;
+    }
+    #header .header-logo {
+        width: 271px;
+    }
+    span.logo-name {
+        height: 60px;
+        line-height: 20px;
+    }
+    .call-to-action-btn {
+        margin-top: 15px;
+        margin-left: 25px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 991px) {
+    #header .header-logo {
+        width: 90%;
+    }
+    .lk {
+        text-align: center;
+    }
+    .header-contacts {
+        float: none;
+        margin-top: 20px;
+    }
+    .nav {
+        margin-top: 30px;
+    }
+    .sticky-header-active .header-logo a {
+        font-size: 16px;
+    }
+    .sticky-header-active span.photo {
+        width: 50px;
+        height: 50px;
+    }
+     .sticky-header-active .header-column {
+         padding-top: 10px;
+     }
+    .contact li {
+        display: inline-block;
+    }
+    #footer .container .row > div {
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    /*.about-right-panel {*/
+        /*display: none;*/
+    /*}*/
+}
+
+@media (max-width: 767px) {
+    .rev_slider_wrapper {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: auto;
+    }
+    .sealer-name {
+        font-size: 20px;
+    }
+    #footer .footer-copyright {
+        padding: 5px 0 10px;
+    }
+    #footer .footer-copyright {
+        margin-top: 20px;
+    }
+    #footer {
+        padding: 35px 0 0;
+    }
+    #footer .footer-ribbon {
+        margin: -55px 0 0 14px;
+    }
+    span.photo {
+        width: 50px;
+        height: 50px;
+    }
+    .h1, h1 {
+        font-size: 20px;
+        line-height: 30px !important;
+    }
+    #header-social {
+        display: inline-block;
+        margin-top: 15px;
+    }
+}
+@media (max-width: 500px) {
+    span.logo-name {
+        width: 195px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    #header .header-logo {
+        width: 84% !important;
+        margin-right: 50px !important;
+    }
+}
