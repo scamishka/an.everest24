@@ -10,3 +10,41 @@ div.news-list img.preview_picture
 .news-date-time {
 	color:#486DAA;
 }
+.property-list-view .property-block-two h3 {
+	max-height: 73px;
+	overflow: hidden;
+}
+.property-list-view .property-block-two .property-info {
+	max-height: 41px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.property-list-view .property-block-two .lower-content span.ico-text {
+	display: inline-block;
+}
+.property-list-view .property-block-two .text {
+	max-height: 65px;
+	overflow: hidden;
+}
+.property-list-view .property-block-two .inner-box .property-price {
+	float: left;
+	width: 100%;
+}
+.property-list-view .property-block-two .property-price .price {
+	max-height: 30px;
+	max-width: 150px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.property-list-view .property-block-two .property-price .location {
+	max-width: calc(100% - 150px);
+	overflow: hidden;
+	white-space: nowrap;
+	max-height: 30px;
+
+}
+@media screen and (min-width: 980px) and (max-width: 1140px) {
+	.property-list-view .property-block-two .lower-content span.ico-text {
+		display: none;
+	}
+}

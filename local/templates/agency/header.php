@@ -64,10 +64,10 @@
                     </div>
                     <div class="top-right clearfix">
                         <ul class="social-icon-one">
-                            <li><a href="index.html#"><span class="fab fa-facebook-f"></span></a></li>
-                            <li><a href="index.html#"><span class="fab fa-twitter"></span></a></li>
-                            <li><a href="index.html#"><span class="fab fa-skype"></span></a></li>
-                            <li><a href="index.html#"><span class="fab fa-linkedin-in"></span></a></li>
+                            <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fab fa-skype"></span></a></li>
+                            <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
                         </ul>
 
 <!--                        <ul class="login-signup">-->

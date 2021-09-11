@@ -1,6 +1,11 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("catalog");
+$APPLICATION->SetPageProperty("description", "Каталог агентства недвижимости");
+$APPLICATION->SetPageProperty("keywords", "Каталог агентства недвижимости");
+$APPLICATION->SetPageProperty("title", "Каталог агентства недвижимости");
+$APPLICATION->SetTitle("Каталог");
+
+$is_admin = $USER->isAdmin();
 ?>
 
 <?$APPLICATION->IncludeComponent(
@@ -69,9 +74,11 @@ $APPLICATION->SetTitle("catalog");
 //			44 => "LOCATION__LONGITUDE",
 			45 => "LOCATION__ADDRESS",
 			46 => "LOCATION__LOCALITY_NAME",
+
 			47 => "FLOOR_TOTAL",
 //			48 => "LOCATION",
 //			49 => "",
+			50 => "LOCATION__MICRO_LOCALITY_NAME",
 		),
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_ORDER1" => "DESC",
@@ -152,6 +159,7 @@ $APPLICATION->SetTitle("catalog");
 			43 => "LOCATION__ADDRESS",
 			44 => "LOCATION__LOCALITY_NAME",
 			45 => "FLOOR_TOTAL",
+			46 => "LOCATION__MICRO_LOCALITY_NAME",
 		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "Y",
 		"DISPLAY_NAME" => "Y",

@@ -120,13 +120,15 @@ $this->setFrameMode(true);
                     <label>Количество комнат</label>
                     <div class="block_checkbox">
                         <?foreach ($arResult["ITEMS"]["PROPERTY_22"]['LIST'] as $xml_id => $value) :?>
-                            <input id="<?=$xml_id?>"
-                                   class="checkbox"
-                                   type="checkbox" name="arrFilter_pf[ROOMS][]"
-                                   value="<?=$xml_id?>"
-                                <?=(in_array($xml_id, $arResult["ITEMS"]["PROPERTY_22"]["INPUT_VALUE"]))?'checked':''?>
-                            >
-                            <label for="<?=$xml_id?>"><?=$value?></label>
+                            <?if(!empty($xml_id)):?>
+                                <input id="<?=$xml_id?>"
+                                       class="checkbox"
+                                       type="checkbox" name="arrFilter_pf[ROOMS][]"
+                                       value="<?=$xml_id?>"
+                                    <?=(in_array($xml_id, $arResult["ITEMS"]["PROPERTY_22"]["INPUT_VALUE"]))?'checked':''?>
+                                >
+                                <label for="<?=$xml_id?>"><?=$value?></label>
+                            <?endif;?>
                         <?endforeach;?>
                     </div>
                 </div>

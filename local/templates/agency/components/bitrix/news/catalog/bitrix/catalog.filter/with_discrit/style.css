@@ -8,11 +8,12 @@ input.checkbox {
 .checkbox + label{
     display: block;
     width: 45px;
-    height: 30px;
+    height: auto;
     /*background: #ccc;*/
     border: 1px solid #555;
     text-align: center;
     padding-top: 3px;
+    padding-bottom: 3px;
 }
 .checkbox + label:before{
     content: '';
@@ -76,15 +77,20 @@ input.checkbox {
 .multiple_select_active option
 {
     display: block;
-    height: 18px;
+    height: auto;
 }
 
 .multiple_select option::before {
     content: "\2610";
+    margin-right: 10px;
+    font-size: 16px;
 }
 .multiple_select option:checked::before {
     content: "\2611";
+    margin-right: 10px;
+    font-size: 16px;
 }
+
 /*.property-search-form.style-four .form-group input,*/
 /*.property-search-form.style-four .form-group select,*/
 /*.property-search-form.style-four .form-group textarea {*/

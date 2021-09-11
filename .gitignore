@@ -3,4 +3,5 @@ venv
 *.jpg
 *.png
 *.js
+*.zip
 test/

@@ -41,6 +41,7 @@ $this->setFrameMode(true);
                                             8 => "ROOMS",
                                             9 => "FLOOR",
                                             10 => "LOCATION__LOCALITY_NAME",
+                                            16 => "LOCATION__MICRO_LOCALITY_NAME",
                                             11 => "AREA",
                                             12 => "SALES_AGENT__NAME",
                                             13 => "SALES_AGENT__PHONE",
@@ -104,7 +105,7 @@ $this->setFrameMode(true);
                         <? if ($arParams["USE_FILTER"] == "Y"): ?>
                             <? $APPLICATION->IncludeComponent(
                                 "bitrix:catalog.filter",
-                                "with_rooms",
+                                "with_discrit",
                                 Array(
                                     "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                                     "IBLOCK_ID" => $arParams["IBLOCK_ID"],

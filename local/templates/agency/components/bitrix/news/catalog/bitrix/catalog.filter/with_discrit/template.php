@@ -14,13 +14,32 @@ $this->setFrameMode(true);
 
 $is_admin = $USER->isAdmin();
 
+
+$cur_reg = $_GET["arrFilter_pf"]["LOCATION__LOCALITY_NAME"];
+if (!$cur_reg) {
+    $cur_reg = '';
+}
+
+$cur_micro = $_GET["arrFilter_pf"]["LOCATION__MICRO_LOCALITY_NAME"];
+if (!$cur_micro) {
+    $cur_micro = [];
+}
+
+$_tmp = [];
+
+foreach ($cur_micro as &$item) {
+    $item = htmlentities($item);
+    $_tmp[$item] = $item;
+}
+
+$cur_micro = array_values($_tmp);
+
 ?>
 
 <div class="sidebar-widget search-properties">
     <div class="sidebar-title"><h2>Фильтр объектов</h2></div>
     <div class="property-search-form style-four">
-        <form id='filter_form'
-              method="get"
+        <form method="get"
               action="<?echo $arResult["FORM_ACTION"]?>"
               name="<?echo $arResult["FILTER_NAME"]."_form"?>">
             <div class="row no-gutters">
@@ -45,15 +64,15 @@ $is_admin = $USER->isAdmin();
                         <label>Количество комнат</label>
                         <div class="block_checkbox">
                             <?foreach ($arResult["ITEMS"]["PROPERTY_22"]['LIST'] as $xml_id => $value) :?>
-                                <?if(!empty($xml_id)):?>
-                                    <input id="<?=$xml_id?>"
-                                           class="checkbox"
-                                           type="checkbox" name="arrFilter_pf[ROOMS][]"
-                                           value="<?=$xml_id?>"
-                                            <?=(in_array($xml_id, $arResult["ITEMS"]["PROPERTY_22"]["INPUT_VALUE"]))?'checked':''?>
-                                    >
-                                    <label for="<?=$xml_id?>"><?=$value?></label>
-                                <?endif;?>
+                            <?if(!empty($xml_id)):?>
+                                <input id="<?=$xml_id?>"
+                                       class="checkbox"
+                                       type="checkbox" name="arrFilter_pf[ROOMS][]"
+                                       value="<?=$xml_id?>"
+                                        <?=(in_array($xml_id, $arResult["ITEMS"]["PROPERTY_22"]["INPUT_VALUE"]))?'checked':''?>
+                                >
+                                <label for="<?=$xml_id?>"><?=$value?></label>
+                            <?endif;?>
                             <?endforeach;?>
                         </div>
                     </div>
@@ -128,9 +147,6 @@ $is_admin = $USER->isAdmin();
                     </div>
                 </div> <!--Этаж-->
 
-                <?php
-                if ($is_admin) {
-                    ?>
                     <div class="form-group">
                         <div class="clearfix">
                             <label>Город/Населённый пункт</label>
@@ -154,7 +170,10 @@ $is_admin = $USER->isAdmin();
                             <label>Район</label>
                             <?if($_GET['arrFilter_pf']['LOCATION__MICRO_LOCALITY_NAME']){?>
                             <div class="block_checkbox micro-location">
-                                    <?foreach ($_GET['arrFilter_pf']['LOCATION__MICRO_LOCALITY_NAME'] as $xml_id => $value) :?>
+                                <?php
+
+                                ?>
+                                    <?foreach ($cur_micro as $xml_id => $value) :?>
 
                                             <input id="<?=$xml_id?>"
                                                    class="checkbox"
@@ -191,9 +210,7 @@ $is_admin = $USER->isAdmin();
 <!--                        </div>-->
 <!--                    </div> -->
                     <!--Район-->
-                    <?
-                }
-                ?>
+
 
                 <?if(!array_key_exists("HIDDEN", $arResult["ITEMS"]["PROPERTY_34"])):?>
                     <?if(isset($arResult["ITEMS"]["PROPERTY_34"]["VALUE"])):?>
@@ -207,10 +224,8 @@ $is_admin = $USER->isAdmin();
                     <input type="submit" name="set_filter" class="theme-btn btn-style-two btn-title"
                         value="Поиск">
                     <input type="hidden" name="set_filter" value="Y" />&nbsp;
-                    <a href="/catalog/" class="reset_input">
-                        <input class="theme-btn btn-style-two btn-title"
-                                               value="Сбросить">
-                    </a>
+                    <a href="/catalog/" class="reset_input"><input class="theme-btn btn-style-two btn-title"
+                                               value="Сбросить"></a>
 
                 </div>
             </div>
@@ -223,7 +238,7 @@ $is_admin = $USER->isAdmin();
                 {
                     return; //don't close dropdown if i select option
                 }
-                var heights = 32;
+                var heights = 60;
                 $(".multiple_select option").each(function(indx, element) {
                     heights += $(element).height();
                 });
@@ -255,6 +270,7 @@ $is_admin = $USER->isAdmin();
                 // $( "<option value=''>(Все)</option>" ).appendTo(el);
                 $.each( data, function( key, val ) {
                     var is_selected = (cur_value.indexOf(key) >= 0);
+                    console.log(cur_value, key, (cur_value.indexOf(key) >= 0))
                     // var opt = $( "<option value='" + key + "'>" + key + "</option>" ).appendTo(el);
                     var opt = $( "<option value='" + key + "'>" + key + "</option>").appendTo(el);
                     if (is_selected) {
@@ -270,23 +286,14 @@ $is_admin = $USER->isAdmin();
                 });
             }
 
-            <?php
-
-            $cur_micro = $_GET["arrFilter_pf"]["LOCATION__MICRO_LOCALITY_NAME"];
-                if (!$cur_micro) {
-                    $cur_micro = [];
-                }
-
-            foreach ($cur_micro as &$item) {
-                $item = htmlentities($item);
-                }
-            ?>
 
             var locality_select = $('#LOCATION__LOCALITYS');
             var micro_locality_select = $('#LOCATION__MICRO_LOCALITYS');
-            var cur_locality = '<?=$arResult["ITEMS"]["PROPERTY_49"]["INPUT_VALUE"]?>';
+            var cur_locality = '<?=$cur_reg?>';
             //var cur_micro_locality_select = '<?//=$arResult["ITEMS"]["PROPERTY_82"]["INPUT_VALUE"]?>//';
             var cur_micro_locality_select = <?= json_encode($cur_micro)?>;
+
+            console.log(11111, cur_locality, cur_micro_locality_select)
 
 
             $.getJSON('/feed-test/cache.json', function( data ) {

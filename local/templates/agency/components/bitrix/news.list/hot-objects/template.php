@@ -20,7 +20,7 @@ $this->setFrameMode(true);
     $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
     ?>
     <!-- Property Block -->
-    <div class="property-block">
+    <div class="property-block" data-mh="group_property-block">
         <div class="inner-box">
             <div class="image-box">
                 <figure class="image">

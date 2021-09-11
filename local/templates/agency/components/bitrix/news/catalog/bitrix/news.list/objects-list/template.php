@@ -22,9 +22,12 @@ $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID(
 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 ?>
 <!-- Property Block -->
+<!--    <pre>-->
+<?//print_r($arItem["PROPERTIES"])?>
+<!--</pre>-->
 <div class="property-block-two wow fadeInUp">
     <div class="inner-box">
-        <div class="image-box">
+        <div data-mh="card-group" class="image-box">
             <figure class="image">
                 <?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
                 <a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
@@ -62,11 +65,11 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
             </figure>
             <span class="for"><?=$arItem["PROPERTIES"]["CATEGORY"]["VALUE"]?></span>
         </div>
-        <div class="lower-content">
+        <div data-mh="card-group" class="lower-content">
             <ul class="property-info clearfix">
-                <li><span class="icon fa fa-expand"></span> Площадь <?=$arItem["PROPERTIES"]["AREA"]["VALUE"]?></li>
-                <li><span class="icon fa fa-building"></span> Этаж <?=$arItem["PROPERTIES"]["FLOOR"]["VALUE"]?></li>
-                <li><span class="icon fa fa-bed"></span> Комнат <?=$arItem["PROPERTIES"]["ROOMS"]["VALUE"]?></li>
+                <li><span class="icon fa fa-expand"></span> <span class="ico-text">Площадь</span> <?=$arItem["PROPERTIES"]["AREA"]["VALUE"]?></li>
+                <li><span class="icon fa fa-building"></span> <span class="ico-text">Этаж</span> <?=$arItem["PROPERTIES"]["FLOOR"]["VALUE"]?></li>
+                <li><span class="icon fa fa-bed"></span> <span class="ico-text">Комнат</span> <?=$arItem["PROPERTIES"]["ROOMS"]["VALUE"][0]?></li>
             </ul>
             <h3>
                 <?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
@@ -77,12 +80,12 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
                     <?echo $arItem["NAME"]?> - <?=$arItem["PROPERTIES"]["CATEGORY"]["VALUE"]?>
                 <?endif?>
             </h3>
-            <div class="text"><?= mb_strimwidth($arItem["DETAIL_TEXT"], 0, 140, "<a href=" . $arItem['DETAIL_PAGE_URL']."> >></a>");?></div>
+            <div class="text"><?=$arItem["DETAIL_TEXT"]?></div>
         </div>
         <div class="property-price clearfix">
             <div class="location">
-                <span class="icon fa fa-map-marker-alt"></span> <?=$arItem["PROPERTIES"]['LOCATION__ADDRESS']['VALUE']?></div>
-            <div class="price"><i class="fa fa-ruble-sign"></i> <?=$arItem['PROPERTIES']['PRICE']['VALUE']?></div>
+                <span class="icon fa fa-map-marker-alt"></span><?=$arItem["PROPERTIES"]['LOCATION__LOCALITY_NAME']['VALUE']?>,  <?=$arItem["PROPERTIES"]['LOCATION__ADDRESS']['VALUE']?> </div>
+            <div class="price"><i class="fa fa-ruble-sign"></i> <?=number_format($arItem['PROPERTIES']['PRICE']['VALUE'], 0, '.', ' ')?></div>
         </div>
     </div>
 </div>

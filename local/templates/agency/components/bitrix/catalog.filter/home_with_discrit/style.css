@@ -92,3 +92,13 @@ input.checkbox {
 .checkbox:checked + label:before{
     color: #00c0ff;
 }
+.property-search-form.style-four .form-group label {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #777777;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}

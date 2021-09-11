@@ -16,7 +16,7 @@ $this->setFrameMode(true);
 <?//global $USER;
 //if ($USER->IsAdmin()) {?>
 <!--<pre>-->
-<?//print_r($arResult['MANAGER'])?>
+<?//print_r($arResult["PROPERTIES"]['LOCATION__MICRO_LOCALITY_NAME'])?>
 <!--</pre>-->
 <?//}?>
 <!-- Sidebar Page Container -->
@@ -69,7 +69,7 @@ $this->setFrameMode(true);
                 </div>
                 <div class="property-detail">
                     <h3>Описание объекта</h3>
-                    <p><?=(empty($arResult["DETAIL_TEXT"])) ? $arResult["DETAIL_TEXT"] : '
+                    <p><?=(!empty($arResult["DETAIL_TEXT"])) ? $arResult["DETAIL_TEXT"] : '
                                 Продажа объекта недвижимости, в новом стремительно развивающемся районе. 
                                 Транспортная доступность. 
                                 Торг возможен на квартире по факту, но минимальный
@@ -82,7 +82,7 @@ $this->setFrameMode(true);
                                 <td><strong>Город:</strong> <?=$arResult["PROPERTIES"]['LOCATION__LOCALITY_NAME']['VALUE']?></td>
                             </tr>
                             <tr>
-                                <td><strong>Район:</strong> <?=$arResult["PROPERTIES"]['LOCATION__DISTRICT']['VALUE']?></td>
+                                <td><strong>Район:</strong> <?=(is_array($arResult["PROPERTIES"]['LOCATION__MICRO_LOCALITY_NAME']['VALUE'])?current($arResult["PROPERTIES"]['LOCATION__MICRO_LOCALITY_NAME']['VALUE']):$arResult["PROPERTIES"]['LOCATION__MICRO_LOCALITY_NAME']['VALUE'])?></td>
                                 <td><strong>Область/край:</strong> <?=$arResult["PROPERTIES"]['LOCATION__REGION']['VALUE']?></td>
                             </tr>
                             <tr>

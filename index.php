@@ -27,7 +27,7 @@ $APPLICATION->SetTitle('Главная');
                     ) ?>
                 <? $APPLICATION->IncludeComponent(
                     "bitrix:catalog.filter",
-                    "home",
+                    "home_with_discrit",
                     Array(
                         "IBLOCK_TYPE" => "content",
                         "IBLOCK_ID" => "2",
