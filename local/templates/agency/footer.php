@@ -11,6 +11,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         </section>
     </div>
 <?endif;?>
+
 <!-- Main Footer -->
 <footer class="main-footer" style="background-image: url(<?= SITE_TEMPLATE_PATH ?>/images/background/3.jpg);">
     <div class="auto-container">

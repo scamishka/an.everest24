@@ -1,17 +1,17 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-//$arResult["IMAGE"] = array();
+<?php
+/** @var $arParams array */
+/** @var $navComponentObject object */
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+
 global $USER;
-//global $USER;
-//if ($USER->IsAdmin()) {
+
     $iblock = $arParams['IBLOCK_ID'];
     if($_GET["arrFilter_pf"]) {
         $arFilter = Array(
             "IBLOCK_ID"=>$iblock,
             "ACTIVE"=>"Y",
         );
-//        echo '<pre>';
-//        print_r($_GET["arrFilter_pf"]);
-//        echo '</pre>';
+
         if($_GET["arrFilter_pf"]["SALES_AGENT__ID"]) {
             $filter_agent = array(
                 "SALES_AGENT__ID" => $_GET["arrFilter_pf"]["SALES_AGENT__ID"]
@@ -48,6 +48,12 @@ global $USER;
             );
             $arFilter["><PROPERTY_FLOOR"] = array($_GET["arrFilter_pf"]["FLOOR"]["LEFT"], $_GET["arrFilter_pf"]["FLOOR"]["RIGHT"]);
         }
+        if($_GET["arrFilter_pf"]["_INTERNAL_ID"]["LEFT"]) {
+            $filter_code = array(
+                "=PROPERTY__INTERNAL_ID" => $_GET["arrFilter_pf"]["_INTERNAL_ID"]["LEFT"]
+            );
+            $arFilter += $filter_code;
+        }
         if($_GET["arrFilter_pf"]["LOCATION__LOCALITY_NAME"]) {
             $filter_locality = array(
                 "PROPERTY_LOCATION__LOCALITY_NAME" => $_GET["arrFilter_pf"]["LOCATION__LOCALITY_NAME"]
@@ -68,9 +74,7 @@ global $USER;
             "PROPERTY_ROOMS",
             "PROPERTY_CATEGORY"
         );
-//     echo '<pre>';
-//     print_r($arFilter);
-//     echo '</pre>';
+
         $res = CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
         $res->NavStart(10);
         $NAV_STRING = $res->GetPageNavStringEx($navComponentObject, "", "quatro", true, null, array());
@@ -86,7 +90,6 @@ global $USER;
 //     echo '</pre>';
         $arResult['ITEMS'] = $arItems;
     }
-//}
 
 foreach($arResult["ITEMS"] as $key=>$arItem):
     $item_micro_locality = $arItem["PROPERTIES"]["LOCATION__MICRO_LOCALITY_NAME"]["VALUE"][0];

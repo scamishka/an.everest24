@@ -104,6 +104,8 @@ $this->setFrameMode(true);
                                             echo "нет";
                                         } elseif (is_array($arProperty["VALUE"])){
                                             echo implode('', $arProperty["VALUE"]);
+                                        } elseif ($arProperty['CODE'] === "SALES_AGENT__ID") {
+                                            echo  $arProperty["DISPLAY_VALUE"];
                                         } else echo $arProperty["VALUE"];
                                         ?>
 

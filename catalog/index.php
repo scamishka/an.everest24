@@ -27,7 +27,7 @@ $is_admin = $USER->isAdmin();
 			1 => "",
 		),
 		"FILTER_PROPERTY_CODE" => array(
-//			0 => "_INTERNAL_ID",
+			0 => "_INTERNAL_ID",
 //			1 => "TYPE",
 //			2 => "PROPERTY_TYPE",
 			3 => "CATEGORY",
@@ -74,7 +74,6 @@ $is_admin = $USER->isAdmin();
 //			44 => "LOCATION__LONGITUDE",
 			45 => "LOCATION__ADDRESS",
 			46 => "LOCATION__LOCALITY_NAME",
-
 			47 => "FLOOR_TOTAL",
 //			48 => "LOCATION",
 //			49 => "",

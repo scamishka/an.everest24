@@ -45,7 +45,7 @@ $this->setFrameMode(true);
             <div class="content-column col-lg-6 col-md-12 col-sm-12">
                 <div class="inner-column">
                     <div class="status"><?=number_format($arItem['PROPERTIES']['PRICE']['VALUE'], 0, '.', ' ')?> <i class="fa fa-ruble-sign"></i></div>
-                    <h3 data-mh="rec-title-group"><?= $arItem["NAME"]?></h3>
+                    <h3 data-mh="rec-title-group"><a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><?= $arItem["NAME"]?></a></h3>
                     <?if($arItem["PROPERTIES"]["LOCATION__ADDRESS"]["VALUE"] || $arItem["PROPERTIES"]["LOCATION__LOCALITY_NAME"]["VALUE"]):?>
                         <div class="location">
                             <span class="icon fa fa-map-marker-alt"></span>

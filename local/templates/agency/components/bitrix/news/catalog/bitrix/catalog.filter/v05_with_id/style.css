@@ -1,0 +1,105 @@
+.block_checkbox {
+    display: flex;
+    justify-content: space-between;
+}
+input.checkbox {
+    display: none!important;
+}
+.form-group.location label {
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #777777;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.checkbox + label{
+    display: block;
+    width: 45px;
+    height: auto;
+    /*background: #ccc;*/
+    border: 1px solid #555;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.checkbox + label:before{
+    content: '';
+    font-size: 20px;
+}
+.checkbox:checked + label{
+    border: 1px solid #00c0ff;
+    color: #00c0ff!important;
+
+}
+.checkbox:checked + label:before{
+    color: #00c0ff;
+}
+.block_checkbox.micro-location {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.block_checkbox.micro-location label {
+    width: auto;
+    padding: 0 5px;
+    margin-right: 5px;
+}
+.property-search-form .form-group a.reset_input input {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+:root
+{
+    --text: "Все";
+}
+.multiple_select
+{
+    height: 18px;
+    width: 90%;
+    overflow: hidden;
+    -webkit-appearance: menulist;
+    position: relative;
+}
+.multiple_select::before
+{
+    content: var(--text);
+    display: block;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+.multiple_select_active
+{
+    display: block;
+    background: #fff;
+    height: auto;
+    overflow: visible !important;
+}
+.multiple_select option
+{
+    display: none;
+    height: 18px;
+    background-color: white;
+}
+.multiple_select_active option
+{
+    display: block;
+    height: auto;
+}
+
+.multiple_select option::before {
+    content: "\2610";
+    margin-right: 10px;
+    font-size: 16px;
+}
+.multiple_select option:checked::before {
+    content: "\2611";
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/*.property-search-form.style-four .form-group input,*/
+/*.property-search-form.style-four .form-group select,*/
+/*.property-search-form.style-four .form-group textarea {*/
+/*    height: auto!important;*/
+/*}*/

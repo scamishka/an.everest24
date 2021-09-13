@@ -25,10 +25,11 @@ $APPLICATION->SetTitle('Главная');
                     10 => "LOCATION__LOCALITY_NAME",
                     11 => "LOCATION__MICRO_LOCALITY_NAME",
                     12 => "AREA",
+                        13 => "_INTERNAL_ID",
                     ) ?>
                 <? $APPLICATION->IncludeComponent(
                     "bitrix:catalog.filter",
-                    "home_with_discrit",
+                    "v05_home_with_code",
                     Array(
                         "IBLOCK_TYPE" => "content",
                         "IBLOCK_ID" => "2",
