@@ -35,7 +35,7 @@ $this->setFrameMode(true);
                 <ul class="property-info clearfix">
                     <li><span class="icon fa fa-expand"></span> Площадь <?=$arItem["PROPERTIES"]["AREA"]["VALUE"]?></li>
                     <li><span class="icon fa fa-building"></span> Этаж <?=$arItem["PROPERTIES"]["FLOOR"]["VALUE"]?></li>
-                    <li><span class="icon fa fa-bed"></span> Комнат <?=$arItem["PROPERTIES"]["ROOMS"]["VALUE"]?></li>
+                    <li><span class="icon fa fa-bed"></span> Комнат <?=$arItem["PROPERTIES"]["ROOMS"]["VALUE"][0]?></li>
 
 <!--                    <li><span class="icon fa fa-expand"></span> Жилая --><?//=$arItem["PROPERTIES"]["LIVING_SPACE"]["VALUE"]?><!--</li>-->
                 </ul>
@@ -43,17 +43,23 @@ $this->setFrameMode(true);
 <!--                    <li><span class="icon fa fa-expand"></span> Кухня --><?//=$arItem["PROPERTIES"]["KITCHEN_SPACE"]["VALUE"]?><!--</li>-->
 <!--                    <li><span class="icon fa fa-building"></span> Этажность --><?//=$arItem["PROPERTIES"]["FLOOR_TOTAL"]["VALUE"]?><!--</li>-->
 <!--                </ul>-->
-                <h3 data-mh="group-home_title-item" data-mh="title-item"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h3>
-                <div class="text"><?= mb_substr($arItem["DETAIL_TEXT"],0, 70)?></div>
+                <h3 data-mh="group-home_title-item">
+                    <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a>
+                </h3>
+                <div class="text"><?=$arItem["DETAIL_TEXT"]?></div>
                 <div class="property-price clearfix d-flex flex-column" data-mh="home-group_location-item">
                     <div class="price">
-                        <i class="fa fa-ruble-sign"></i> <?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>
+                        <i class="fa fa-ruble-sign"></i> <?=number_format($arItem['PROPERTIES']['PRICE']['VALUE'], 0, '.', ' ')?>
                     </div>
                     <?if($arItem["PROPERTIES"]["LOCATION__ADDRESS"]["VALUE"]):?>
                         <div class="location" >
                             <span class="icon fa fa-map-marker-alt">
-
-                            </span> <?=$arItem["PROPERTIES"]["LOCATION__ADDRESS"]["VALUE"]?>
+                            </span> <?=$arItem["PROPERTIES"]["LOCATION__ADDRESS"]["VALUE"]?> <?=$arItem["PROPERTIES"]["LOCATION__LOCALITY_NAME"]["VALUE"]?>
+                        </div>
+                    <?else:?>
+                        <div class="location" >
+                            <span class="icon fa fa-map-marker-alt">
+                            </span> <?=$arItem["PROPERTIES"]["LOCATION__MICRO_LOCALITY_NAME"]["VALUE"][0]?> <?=$arItem["PROPERTIES"]["LOCATION__LOCALITY_NAME"]["VALUE"]?>
                         </div>
                     <?endif;?>
                 </div>

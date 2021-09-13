@@ -131,14 +131,18 @@ $this->setFrameMode(true);
                         </div>
                     </div>
                 </div> <!--Этаж-->
-
-                <?if(!array_key_exists("HIDDEN", $arResult["ITEMS"]["PROPERTY_34"])):?>
-                    <?if(isset($arResult["ITEMS"]["PROPERTY_34"]["VALUE"])):?>
-                        <div class="form-group selection">
-                            <?=$arResult["ITEMS"]["PROPERTY_34"]["INPUT"]?>
-                        </div> <!-- Площадь участка -->
-                    <?endif;?>
-                <?endif;?>
+<!--<pre>-->
+<?//print_r($arResult["ITEMS"])?>
+<!--</pre>-->
+<!--                --><?//if(!array_key_exists("HIDDEN", $arResult["ITEMS"]["PROPERTY_82"])):?>
+<!--                    --><?//if(isset($arResult["ITEMS"]["PROPERTY_82"])):?>
+<!--                        <div class="form-group selection">-->
+<!--                            <input type="text" name="arrFilter_pf[LOCATION__MICRO_LOCALITY_NAME][]" size="20" value="">-->
+<!--                            <input type="text" name="arrFilter_pf[LOCATION__MICRO_LOCALITY_NAME][]" size="20" value="">-->
+<!---->
+<!--                        </div> -->
+<!--                    --><?//endif;?>
+<!--                --><?//endif;?>
 
                 <div class="form-group d-flex">
                     <input type="submit" name="set_filter" class="theme-btn btn-style-two btn-title"

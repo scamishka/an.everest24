@@ -29,10 +29,12 @@ $this->setFrameMode(true);
                          alt="<?= $arItem["NAME"]?>">
                 </a>
             </div>
-            <h4>
-                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["PROPERTIES"]["LOCATION__ADDRESS"]["VALUE"]?></a>
+            <h4 data-mh="foot-title-group">
+                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
+                    <?=$arItem["NAME"]?>
+                </a>
             </h4>
-            <span class="date"><?=$arItem['PROPERTIES']['PRICE']['VALUE']?> <i class="fa fa-ruble-sign"></i></span>
+            <span class="date"><?=number_format($arItem['PROPERTIES']['PRICE']['VALUE'], 0, '.', ' ')?> <i class="fa fa-ruble-sign"></i></span>
         </div>
     <?endforeach;?>
 </div>

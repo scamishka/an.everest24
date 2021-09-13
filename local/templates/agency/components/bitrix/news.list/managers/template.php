@@ -27,14 +27,17 @@ $this->setFrameMode(true);
                     </div>
                     <div class="info-box">
                         <h4 class="name">
-                            <a href="/catalog/?arrFilter_pf%5BSALES_AGENT__NAME%5D=<?=$name?>&arrFilter_pf%5BSALES_AGENT__PHONE%5D=<?=$phone?>&arrFilter_pf%5BSALES_AGENT__EMAIL%5D=<?=$email?>&set_filter=Все+объекты+менеджера&set_filter=Y">
+<!--                            <pre>-->
+<!--                            --><?//print_r($arItem['ID'])?>
+<!--                            </pre>-->
+                            <a href="/catalog/?arrFilter_pf%5BSALES_AGENT__ID%5D=<?=$arItem['ID']?>&set_filter=Все+объекты+менеджера+%283%29&set_filter=Y">
                                 <?=$arItem['PROPERTIES']['SALES_AGENT__NAME']['VALUE']?></a>
                             <p><?=$arItem['PROPERTIES']['SALES_AGENT__CATEGORY']['VALUE']?></p>
                         </h4>
                         <span class="designation">
 
                             <p><a href="tel:<?=$arItem['PROPERTIES']['SALES_AGENT__PHONE']['VALUE']?>"><?=$arItem['PROPERTIES']['SALES_AGENT__PHONE']['VALUE']?></a></p>
-                               <a href="/catalog/?arrFilter_pf%5BSALES_AGENT__NAME%5D=<?=$name?>&arrFilter_pf%5BSALES_AGENT__PHONE%5D=<?=$phone?>&arrFilter_pf%5BSALES_AGENT__EMAIL%5D=<?=$email?>&set_filter=Все+объекты+менеджера&set_filter=Y">Мои объекты</a></span>
+                               <a href="/catalog/?arrFilter_pf%5BSALES_AGENT__ID%5D=<?=$arItem['ID']?>&set_filter=Все+объекты+менеджера+%283%29&set_filter=Y">Мои объекты</a></span>
                     </div>
                 </div>
             </div>

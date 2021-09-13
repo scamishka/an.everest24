@@ -128,9 +128,9 @@ $is_admin = $USER->isAdmin();
                     </div>
                 </div> <!--Этаж-->
 
-                <?php
-                if ($is_admin) {
-                    ?>
+<!--                --><?php
+//                if ($is_admin) {
+//                    ?>
                     <div class="form-group">
                         <div class="clearfix">
                             <label>Город/Населённый пункт</label>
@@ -169,7 +169,7 @@ $is_admin = $USER->isAdmin();
                             <div class="input">
                                 <select id="LOCATION__MICRO_LOCALITYS"
                                         class="multiple_select" multiple
-                                        name="arrFilter_pf[LOCATION__MICRO_LOCALITY_NAME][]">
+                                        name="arrFilter_pf[LOCATION__MICRO_LOCALITY_NAME]">
                                     <option>(Все)</option>
                                 </select>
                             </div>
@@ -191,9 +191,9 @@ $is_admin = $USER->isAdmin();
 <!--                        </div>-->
 <!--                    </div> -->
                     <!--Район-->
-                    <?
-                }
-                ?>
+<!--                    --><?//
+//                }
+//                ?>
 
                 <?if(!array_key_exists("HIDDEN", $arResult["ITEMS"]["PROPERTY_34"])):?>
                     <?if(isset($arResult["ITEMS"]["PROPERTY_34"]["VALUE"])):?>

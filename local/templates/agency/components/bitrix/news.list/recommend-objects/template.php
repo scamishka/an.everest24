@@ -12,9 +12,6 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<!--<pre>-->
-<? //print_r($arResult);?>
-<!--</pre>-->
 <? foreach ($arResult["ITEMS"] as $arItem): ?>
     <?
     $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -37,8 +34,8 @@ $this->setFrameMode(true);
                         <ul class="property-options">
                             <li data-tooltip="Подбробнее"><a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><span
                                             class="fa fa-book"></span></a></li>
-                            <li data-tooltip="Фото"><a href="#"><span class="fa fa-image"></span></a></li>
-                            <li data-tooltip="Видео"><a href="#"><span class="fa fa-film"></span></a></li>
+                            <li data-tooltip="Фото"><a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><span class="fa fa-image"></span></a></li>
+                            <li data-tooltip="Видео"><a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><span class="fa fa-film"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -47,27 +44,27 @@ $this->setFrameMode(true);
             <!-- Content Column -->
             <div class="content-column col-lg-6 col-md-12 col-sm-12">
                 <div class="inner-column">
-                    <div class="status"><?= $arItem["PROPERTIES"]["PRICE"]["VALUE"] ?> <i class="fa fa-ruble-sign"></i></div>
-                    <h3><?= $arItem["PROPERTIES"]["CATEGORY"]["VALUE_ENUM"] ?> <?= $arItem["NAME"] ?></h3>
-                    <?if($arItem["PROPERTIES"]["LOCATION__ADDRESS"]["VALUE"]):?>
+                    <div class="status"><?=number_format($arItem['PROPERTIES']['PRICE']['VALUE'], 0, '.', ' ')?> <i class="fa fa-ruble-sign"></i></div>
+                    <h3 data-mh="rec-title-group"><?= $arItem["NAME"]?></h3>
+                    <?if($arItem["PROPERTIES"]["LOCATION__ADDRESS"]["VALUE"] || $arItem["PROPERTIES"]["LOCATION__LOCALITY_NAME"]["VALUE"]):?>
                         <div class="location">
                             <span class="icon fa fa-map-marker-alt"></span>
-                            <?=$arItem["PROPERTIES"]["LOCATION__ADDRESS"]["VALUE"]?>
+                            <?=$arItem["PROPERTIES"]["LOCATION__LOCALITY_NAME"]["VALUE"]?> <?=$arItem["PROPERTIES"]["LOCATION__ADDRESS"]["VALUE"]?>
                         </div>
                     <?endif;?>
-                    <div class="text"><?= mb_substr($arItem["DETAIL_TEXT"], 0, 370)?></div>
+                    <div class="text" data-mh="rec-text-group"><?=$arItem["DETAIL_TEXT"]?></div>
                     <ul class="property-info">
                         <? if ($arItem["PROPERTIES"]["AREA"]["VALUE"]) {?>
-                            <li><span class="icon flaticon-grid"></span> Площадь <br> <?=$arItem["PROPERTIES"]["AREA"]["VALUE"]?></li>
+                            <li><span class="icon flaticon-grid"></span> Площадь <br> <?=$arItem["PROPERTIES"]["AREA"]["VALUE"]?> m2</li>
                         <?}?>
                         <? if ($arItem["PROPERTIES"]["ROOMS"]["VALUE"]) {?>
-                            <li><span class="icon flaticon-bedroom-1"></span> Комнат <br> <?=$arItem["PROPERTIES"]["ROOMS"]["VALUE"]?></li>
+                            <li><span class="icon flaticon-bedroom-1"></span> Комнат <br> <?=$arItem["PROPERTIES"]["ROOMS"]["VALUE"][0]?></li>
                         <?}?>
                         <? if ($arItem["PROPERTIES"]["BATHROOM_UNIT"]["VALUE"]) {?>
                             <li><span class="icon flaticon-bathtub"></span> С/у <br> <?=$arItem["PROPERTIES"]["BATHROOM_UNIT"]["VALUE"]?></li>
                         <?}?>
                         <? if ($arItem["PROPERTIES"]["BALCONY"]["VALUE"]) {?>
-                            <li><span class="icon flaticon-garage-1"></span> Балкон <br> <?=$arItem["PROPERTIES"]["BALCONY"]["VALUE"]?></li>
+                            <li><span class="icon flaticon-garage-1"></span> <?=$arItem["PROPERTIES"]["BALCONY"]["VALUE"]?></li>
                         <?}?>
 
                     </ul>

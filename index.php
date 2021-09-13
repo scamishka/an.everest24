@@ -22,8 +22,9 @@ $APPLICATION->SetTitle('Главная');
                     7 => "PRICE",
                     8 => "ROOMS",
                     9 => "FLOOR",
-                    10 => "LOCALITY_NAME",
-                    11 => "AREA",
+                    10 => "LOCATION__LOCALITY_NAME",
+                    11 => "LOCATION__MICRO_LOCALITY_NAME",
+                    12 => "AREA",
                     ) ?>
                 <? $APPLICATION->IncludeComponent(
                     "bitrix:catalog.filter",

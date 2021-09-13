@@ -10,3 +10,7 @@ div.news-list img.preview_picture
 .news-date-time {
 	color:#486DAA;
 }
+.popular-posts .post h4 {
+	max-height: 48px;
+	overflow: hidden;
+}

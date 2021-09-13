@@ -12,7 +12,12 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
+<?global $USER;
+if ($USER->IsAdmin()) {?>
+<!--<pre>-->
+<?//print_r($arResult)?>
+<!--</pre>-->
+<?}?>
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
     <?=$arResult["NAV_STRING"]?><br />
 <?endif;?>
@@ -84,6 +89,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
         </div>
         <div class="property-price clearfix">
             <div class="location">
+                район <?=($arItem["PROPERTIES"]['LOCATION__MICRO_LOCALITY_NAME']['VALUE'][0])?>
                 <span class="icon fa fa-map-marker-alt"></span><?=$arItem["PROPERTIES"]['LOCATION__LOCALITY_NAME']['VALUE']?>,  <?=$arItem["PROPERTIES"]['LOCATION__ADDRESS']['VALUE']?> </div>
             <div class="price"><i class="fa fa-ruble-sign"></i> <?=number_format($arItem['PROPERTIES']['PRICE']['VALUE'], 0, '.', ' ')?></div>
         </div>

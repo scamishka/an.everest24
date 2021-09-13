@@ -10,3 +10,11 @@ div.news-list img.preview_picture
 .news-date-time {
 	color:#486DAA;
 }
+.modern-properties .modern-property h3 {
+	max-height: 75px;
+	overflow: hidden;
+}
+.modern-properties .modern-property .text {
+	max-height: 190px;
+	overflow: hidden;
+}

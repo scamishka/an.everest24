@@ -48,3 +48,21 @@ div.news-list img.preview_picture
 		display: none;
 	}
 }
+@media screen and (max-width: 475px) {
+	.property-list-view .property-block-two .property-info {
+		display:flex;
+	}
+	.property-list-view .property-block-two .lower-content span.ico-text {
+		display: none;
+	}
+	.property-list-view .property-block-two .property-price .price {
+		max-width: unset;
+	}
+	.property-list-view .property-block-two .property-price .location {
+		max-width: unset;
+		overflow: unset;
+		white-space: unset;
+		max-height: unset;
+
+	}
+}

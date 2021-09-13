@@ -10,3 +10,15 @@ div.news-list img.preview_picture
 .news-date-time {
 	color:#486DAA;
 }
+.property-section .property-block h3 {
+	max-height: 80px;
+	overflow: hidden;
+}
+.property-section .property-block .text {
+	max-height: 68px;
+	overflow: hidden;
+}
+.property-section .property-block .location {
+	max-height: 30px;
+	overflow: hidden;
+}

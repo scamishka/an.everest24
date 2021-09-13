@@ -11,3 +11,25 @@ div.news-detail img.detail_picture
 {
 	color:#486DAA;
 }
+#most-objects .property-block-two h3 {
+	max-height: 59px;
+	overflow:hidden;
+}
+#most-objects .property-block-two .property-price {
+	display: flex;
+	flex-direction: column;
+}
+#most-objects .property-block-two .property-price .location {
+	max-height: 35px;
+	overflow: hidden;
+}
+@media screen and (max-width: 775px) {
+	input.btn-style-man	{
+		font-size: 12px;
+		padding: 16px 0;
+	}
+	.property-info {
+		display: flex;
+	}
+}
+

@@ -13,12 +13,6 @@
 $this->setFrameMode(true);
 ?>
 
-<?//global $USER;
-//if ($USER->IsAdmin()) {?>
-<!--<pre>-->
-<?//print_r($arResult["PROPERTIES"]['LOCATION__MICRO_LOCALITY_NAME'])?>
-<!--</pre>-->
-<?//}?>
 <!-- Sidebar Page Container -->
 <div class="sidebar-page-container">
     <div class="auto-container">
@@ -31,13 +25,15 @@ $this->setFrameMode(true);
                         <div class="about-property col-lg-7 col-md-12 col-sm-12">
                             <h2><?=$arResult["NAME"]?></h2>
                             <ul class="property-info clearfix">
-                                <li><i class="fa fa-expand"></i> <?=$arResult["PROPERTIES"]["AREA"]["VALUE"]?> м<sup>2</sup></li>
-                                <li><i class="fa fa-building"></i> Этаж <?=$arResult["PROPERTIES"]["FLOOR"]["VALUE"]?></li>
-                                <li><i class="fa fa-bed"></i> Комнат <?=(is_array($arResult["PROPERTIES"]["ROOMS"]["VALUE"])?implode('', $arResult["PROPERTIES"]["ROOMS"]["VALUE"]):$arResult["PROPERTIES"]["ROOMS"]["VALUE"])?></li>
+                                <li><i class="fa fa-expand"></i>  <?=$arResult["PROPERTIES"]["AREA"]["VALUE"]?> м<sup>2</sup></li>
+                                <li><i class="fa fa-building"></i> <span class="ico-text">Этаж</span> <?=$arResult["PROPERTIES"]["FLOOR"]["VALUE"]?></li>
+                                <li><i class="fa fa-bed"></i> <span class="ico-text">Комнат</span> <?=$arResult["PROPERTIES"]["ROOMS"]["VALUE"][0]?></li>
                             </ul>
                         </div>
                         <div class="price-column col-lg-5 col-md-12 col-sm-12">
-                            <div class="price"><i class="fa fa-ruble-sign"></i> <?=$arResult['PROPERTIES']['PRICE']['VALUE']?></div>
+                            <div class="price"><i class="fa fa-ruble-sign"></i>
+                                <?=number_format($arResult['PROPERTIES']['PRICE']['VALUE'], 0, '.', ' ')?>
+                            </div>
 
                             <div class="location">
                                 <i class="icon fa fa-map-marker-alt"></i>
@@ -82,7 +78,7 @@ $this->setFrameMode(true);
                                 <td><strong>Город:</strong> <?=$arResult["PROPERTIES"]['LOCATION__LOCALITY_NAME']['VALUE']?></td>
                             </tr>
                             <tr>
-                                <td><strong>Район:</strong> <?=(is_array($arResult["PROPERTIES"]['LOCATION__MICRO_LOCALITY_NAME']['VALUE'])?current($arResult["PROPERTIES"]['LOCATION__MICRO_LOCALITY_NAME']['VALUE']):$arResult["PROPERTIES"]['LOCATION__MICRO_LOCALITY_NAME']['VALUE'])?></td>
+                                <td><strong>Район:</strong> <?=$arResult["PROPERTIES"]['LOCATION__MICRO_LOCALITY_NAME']['VALUE'][0]?></td>
                                 <td><strong>Область/край:</strong> <?=$arResult["PROPERTIES"]['LOCATION__REGION']['VALUE']?></td>
                             </tr>
                             <tr>
@@ -175,16 +171,25 @@ $this->setFrameMode(true);
                                         <div class="lower-content">
                                             <ul class="property-info clearfix">
                                                 <li><span class="icon fa fa-expand"></span> <?=$elem['PROPERTIES']['AREA']['VALUE']?></li>
-                                                <li><span class="icon fa fa-bed"></span> Комнат <?=(is_array($elem["PROPERTIES"]["ROOMS"]["VALUE"])?implode('', $elem["PROPERTIES"]["ROOMS"]["VALUE"]):$elem["PROPERTIES"]["ROOMS"]["VALUE"])?></li>
-                                                <li><span class="icon fa fa-building"></span> Этаж <?=$elem['PROPERTIES']['FLOOR']['VALUE']?></li>
+                                                <li><span class="icon fa fa-bed"></span> <?=$elem["PROPERTIES"]["ROOMS"]["VALUE"][0]?></li>
+                                                <li><span class="icon fa fa-building"></span> <?=$elem['PROPERTIES']['FLOOR']['VALUE']?></li>
                                             </ul>
                                             <h3 data-mh="group_title-item"><a href="<?=$elem['DETAIL_PAGE_URL']?>"><?=$elem['NAME']?></a></h3>
                                         </div>
                                         <div class="property-price clearfix" >
-                                            <div class="location" data-mh="group_location-item">
-                                                <span class="icon fa fa-map-marker-alt"></span> <?=$elem['PROPERTIES']['LOCATION__ADDRESS']['VALUE']?></div>
+                                            <?if($arResult["PROPERTIES"]["LOCATION__ADDRESS"]["VALUE"]):?>
+                                                <div class="location" >
+                                                    <span class="icon fa fa-map-marker-alt">
+                                                    </span> <?=$arResult["PROPERTIES"]["LOCATION__ADDRESS"]["VALUE"]?> <?=$arResult["PROPERTIES"]["LOCATION__LOCALITY_NAME"]["VALUE"]?>
+                                                </div>
+                                            <?else:?>
+                                                <div class="location" >
+                                                    <span class="icon fa fa-map-marker-alt">
+                                                    </span> <?=$arResult["PROPERTIES"]["LOCATION__MICRO_LOCALITY_NAME"]["VALUE"][0]?> <?=$arResult["PROPERTIES"]["LOCATION__LOCALITY_NAME"]["VALUE"]?>
+                                                </div>
+                                            <?endif;?>
                                             <div class="price">
-                                                <i class="fa fa-ruble-sign"></i> <?=$elem['PROPERTIES']['PRICE']['VALUE']?></div>
+                                                <i class="fa fa-ruble-sign"></i> <?=number_format($arResult['PROPERTIES']['PRICE']['VALUE'], 0, '.', ' ')?></div>
                                         </div>
                                     </div>
                                 </div>

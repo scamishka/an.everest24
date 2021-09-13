@@ -17,22 +17,24 @@ $is_admin = $USER->isAdmin();
 
 $cur_reg = $_GET["arrFilter_pf"]["LOCATION__LOCALITY_NAME"];
 if (!$cur_reg) {
-    $cur_reg = '';
-}
+        $cur_reg = '';
+    }
 
 $cur_micro = $_GET["arrFilter_pf"]["LOCATION__MICRO_LOCALITY_NAME"];
 if (!$cur_micro) {
-    $cur_micro = [];
-}
+        $cur_micro = [];
+    }
 
 $_tmp = [];
 
 foreach ($cur_micro as &$item) {
-    $item = htmlentities($item);
-    $_tmp[$item] = $item;
-}
+        $item = htmlentities($item);
+        $_tmp[$item] = $item;
+    }
 
 $cur_micro = array_values($_tmp);
+
+//var_dump($cur_micro);
 
 ?>
 
@@ -67,7 +69,8 @@ $cur_micro = array_values($_tmp);
                             <?if(!empty($xml_id)):?>
                                 <input id="<?=$xml_id?>"
                                        class="checkbox"
-                                       type="checkbox" name="arrFilter_pf[ROOMS][]"
+                                       type="checkbox"
+                                       name="arrFilter_pf[ROOMS][]"
                                        value="<?=$xml_id?>"
                                         <?=(in_array($xml_id, $arResult["ITEMS"]["PROPERTY_22"]["INPUT_VALUE"]))?'checked':''?>
                                 >
@@ -138,7 +141,7 @@ $cur_micro = array_values($_tmp);
                             <input type="hidden"
                                    class="floor-count_left"
                                    name="<?=$arResult["ITEMS"]["PROPERTY_9"]["INPUT_NAMES"][0]?>"
-                                   data-min="<?=$arResult["ITEMS"]["PROPERTY_9"]["INPUT_VALUES"][0];?>">
+                                   data-min="<?=($_GET["arrFilter_pf"]["FLOOR"]["LEFT"])?$_GET["arrFilter_pf"]["FLOOR"]["LEFT"]:$arResult["ITEMS"]["PROPERTY_9"]["INPUT_VALUES"][0];?>">
                             <input type="hidden"
                                    class="floor-count_right"
                                    name="<?=$arResult["ITEMS"]["PROPERTY_9"]["INPUT_NAMES"][1]?>"
@@ -147,53 +150,46 @@ $cur_micro = array_values($_tmp);
                     </div>
                 </div> <!--Этаж-->
 
-                    <div class="form-group">
-                        <div class="clearfix">
-                            <label>Город/Населённый пункт</label>
-                            <div class="input">
-                                <select
-                                        id="LOCATION__LOCALITYS"
-                                        name="<?=$arResult["ITEMS"]["PROPERTY_49"]["INPUT_NAME"]?>"
-                                >
-                                    <option>(Все)</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div> <!--Регион-->
-
-                    <style>
-
-                    </style>
-
-                    <div class="form-group">
-                        <div class="clearfix">
-                            <label>Район</label>
-                            <?if($_GET['arrFilter_pf']['LOCATION__MICRO_LOCALITY_NAME']){?>
-                            <div class="block_checkbox micro-location">
-                                <?php
-
-                                ?>
-                                    <?foreach ($cur_micro as $xml_id => $value) :?>
-
-                                            <input id="<?=$xml_id?>"
-                                                   class="checkbox"
-                                                   type="checkbox"
-                                                   value='<?=$value?>'
-                                                    checked
-                                            >
-                                            <label for="<?=$xml_id?>"><?=$value?></label>
-                                    <?endforeach;?>
-                            </div>
-                            <?}?>
-                            <div class="input">
-                                <select id="LOCATION__MICRO_LOCALITYS"
-                                        class="multiple_select" multiple
-                                        name="arrFilter_pf[LOCATION__MICRO_LOCALITY_NAME][]">
-                                    <option>(Все)</option>
-                                </select>
-                            </div>
+                <div class="form-group location">
+                    <div class="clearfix">
+                        <label>Город/Населённый пункт</label>
+                        <div class="input">
+                            <select
+                                    id="LOCATION__LOCALITYS"
+                                    name="<?=$arResult["ITEMS"]["PROPERTY_49"]["INPUT_NAME"]?>"
+                            >
+                                <option>(Все)</option>
+                            </select>
                         </div>
                     </div>
+                </div> <!--Регион-->
+
+                <div class="form-group location">
+                    <div class="clearfix">
+                        <label>Район</label>
+                        <?if($_GET['arrFilter_pf']['LOCATION__MICRO_LOCALITY_NAME']){?>
+                        <div class="block_checkbox micro-location">
+                                <?foreach ($cur_micro as $xml_id => $value) :?>
+
+                                        <input id="<?=$xml_id?>"
+                                               class="checkbox"
+                                               type="checkbox"
+                                               value='<?=$value?>'
+                                                checked
+                                        >
+                                        <label for="<?=$xml_id?>"><?=$value?></label>
+                                <?endforeach;?>
+                        </div>
+                        <?}?>
+                        <div class="input">
+                            <select id="LOCATION__MICRO_LOCALITYS"
+                                    class="multiple_select" multiple
+                                    name='arrFilter_pf[LOCATION__MICRO_LOCALITY_NAME][]'>
+                                <option>(Все)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
 
 <!--                    <div class="form-group">-->
 <!--                        <div class="clearfix">-->
@@ -251,7 +247,6 @@ $cur_micro = array_values($_tmp);
                 });
             });
 
-
             function appendOptions(el, data, cur_value) {
                 $(el).find('option').remove();
                 $( "<option value=''>(Все)</option>" ).appendTo(el);
@@ -270,7 +265,7 @@ $cur_micro = array_values($_tmp);
                 // $( "<option value=''>(Все)</option>" ).appendTo(el);
                 $.each( data, function( key, val ) {
                     var is_selected = (cur_value.indexOf(key) >= 0);
-                    console.log(cur_value, key, (cur_value.indexOf(key) >= 0))
+                    // console.log(cur_value, key, (cur_value.indexOf(key) >= 0))
                     // var opt = $( "<option value='" + key + "'>" + key + "</option>" ).appendTo(el);
                     var opt = $( "<option value='" + key + "'>" + key + "</option>").appendTo(el);
                     if (is_selected) {
@@ -286,14 +281,13 @@ $cur_micro = array_values($_tmp);
                 });
             }
 
-
             var locality_select = $('#LOCATION__LOCALITYS');
             var micro_locality_select = $('#LOCATION__MICRO_LOCALITYS');
             var cur_locality = '<?=$cur_reg?>';
             //var cur_micro_locality_select = '<?//=$arResult["ITEMS"]["PROPERTY_82"]["INPUT_VALUE"]?>//';
             var cur_micro_locality_select = <?= json_encode($cur_micro)?>;
-
-            console.log(11111, cur_locality, cur_micro_locality_select)
+            // console.log(locality_select);
+            // console.log(11111, cur_locality, cur_micro_locality_select)
 
 
             $.getJSON('/feed-test/cache.json', function( data ) {
@@ -351,9 +345,9 @@ $cur_micro = array_values($_tmp);
 
             getFilterSlider("floor-count", 1, 25);
 
-            getFilterSlider("price-amount", 500000, 10000000);
+            getFilterSlider("price-amount", 500000, 30000000);
 
-            getFilterSlider("area", 0, 100);
+            getFilterSlider("area", 0, 500);
 
             $(document).ready(function () {
                 let inputManager = $('input[name="arrFilter_pf[SALES_AGENT__NAME]"]');

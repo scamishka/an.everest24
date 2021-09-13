@@ -5,6 +5,13 @@
 input.checkbox {
     display: none!important;
 }
+.form-group.location label {
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #777777;
+    font-weight: 600;
+    text-transform: uppercase;
+}
 .checkbox + label{
     display: block;
     width: 45px;
